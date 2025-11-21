@@ -27,7 +27,7 @@ const Form = ({ user, setUser }) => {
             const sendData = formValue === "signin"
                 ? { email: formData.email, password: formData.password }
                 : formData;
-            const response = await axios.post(`http://localhost:5000/auth/${formValue}`, sendData, {
+            const response = await axios.post(`${import.meta.env.VITE_API_URI}/auth/${formValue}`, sendData, {
                 headers: {
                     "Content-type": "application/json"
                 }

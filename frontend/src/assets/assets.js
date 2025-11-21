@@ -26,10 +26,10 @@ export const assets = [
 ]
 
 export const mobileassets = [
-    { id : 5 , img : banner5 , quote : "Fashion is art, and style is your personal canvas." },
-    { id : 6 , img : banner6 , quote : "Clothes speak louder than words, wear your story." },
-    { id : 7 , img : banner7 , quote : "Trends fade fast, but timeless style stays forever" },
-    { id : 8 , img : banner8 , quote : "Elegance begins when confidence meets design." },
+    { id : 5 , img : banner5 },
+    { id : 6 , img : banner6 },
+    { id : 7 , img : banner7 },
+    { id : 8 , img : banner8 },
 ]
 
 export const category = [
@@ -39,10 +39,10 @@ export const category = [
 ]
 
 export const fullmodel = [
-    { id : 1 , img : fullmodel1 , title : 'Men' , category : "menshirt"},
-    { id : 2 , img : fullmodel2 , title : 'Shooes' , category : "shooes"},
-    { id : 3 , img : fullmodel3 , title : 'Sunglasses' , category : "sunglasses"},
-    { id : 4 , img : fullmodel4 , title : 'Women' , category : "womentop"},
+    { id : 1 , img : fullmodel1 , title : 'Men' , category : "menshirt" , quote : "Fashion is art, and style is your personal canvas."},
+    { id : 2 , img : fullmodel2 , title : 'Shooes' , category : "shooes" , quote : "Clothes speak louder than words, wear your story."},
+    { id : 3 , img : fullmodel3 , title : 'Sunglasses' , category : "sunglasses" , quote : "Trends fade fast, but timeless style stays forever"},
+    { id : 4 , img : fullmodel4 , title : 'Women' , category : "womentop" , quote : "Elegance begins when confidence meets design."},
 ]
 
 export const logo = {

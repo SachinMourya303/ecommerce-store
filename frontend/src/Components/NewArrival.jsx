@@ -12,7 +12,7 @@ const NewArrival = ({ user, setfetchedFavProducts, setfetchedCartProducts }) => 
   const [products, setProducts] = useState([]);
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/products/getallproducts');
+      const response = await axios.get(`${import.meta.env.VITE_API_URI}/products/getallproducts`);
       setProducts(response.data.products);
     }
     catch (error) {

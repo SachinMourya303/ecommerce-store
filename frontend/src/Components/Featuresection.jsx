@@ -4,7 +4,7 @@ import React from 'react'
 const Featuresection = () => {
     return (
         <div>
-            <div className='flex justify-center w-full'>
+            <div className='flex justify-center w-full mt-10 md:mt-30 px-6 md:px-16 lg:px-24 xl:px-32 py-4 transition-all'>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <div className="top-0 left-1/2 -translate-x-1/2 rounded-full absolute blur-[300px] -z-10 bg-[#FBFFE1]/70"></div>
                     <div className="flex flex-col items-center justify-center max-w-80">

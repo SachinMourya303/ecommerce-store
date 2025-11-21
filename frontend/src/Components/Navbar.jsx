@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Heart, Menu, Search, ShoppingBag, Strikethrough, X } from 'lucide-react'
 import { NavLink, useNavigate } from 'react-router-dom'
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import axios from 'axios';
 const Navbar = ({ user, setUser, fetchedCartProducts, fetchedFavProducts, setCartProducts, setFavProducts , setfetchedFavProducts , setfetchedCartProducts }) => {
 
@@ -103,7 +103,6 @@ const Navbar = ({ user, setUser, fetchedCartProducts, fetchedFavProducts, setCar
 
     return (
         <div className='md:absolute w-full'>
-            <Toaster />
             <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white transition-all">
                 <div className='flex items-center gap-2 text-indigo-500'>
                     <Strikethrough />
@@ -184,17 +183,17 @@ const Navbar = ({ user, setUser, fetchedCartProducts, fetchedFavProducts, setCar
 
             {
                 model
-                    ? <div className='absolute z-100 w-full h-screen backdrop-blur flex justify-center py-10 transition-all'>
-                        <div className='bg-white w-[90%] md:w-[50%] border border-gray-300 rounded-lg shadow-[0px_0px_10px_lightgray] overflow-y-scroll'>
-                            <div className='flex justify-around mt-5'>
-                                <div className='w-[80%] border border-gray-300 flex justify-center items-center h-12 px-5 rounded-full'>
-                                    <input onChange={onChangeHandler} name='search' value={searchText.search} type="text" placeholder='Search menshirt , womentop , shooes , sunglasses' className='w-[90%] outline-none' />
+                    ? <div className='absolute z-100 w-full h-screen backdrop-blur flex justify-center transition-all'>
+                        <div className='bg-white h-[75%] w-[90%] md:w-[50%] border border-gray-300 rounded-lg shadow-[0px_0px_10px_lightgray]'>
+                            <div className='flex justify-around mt-5 px-2 md:px-0'>
+                                <div className='w-[90%] flex justify-center items-center rounded-full'>
+                                    <input onChange={onChangeHandler} name='search' value={searchText.search} type="text" placeholder='Search your favourite product' className='w-full outline-none' />
                                 </div>
                                 <button onClick={() => setModel(false)} className='text-gray-500 cursor-pointer'><X /></button>
                             </div>
                             <hr className='border-1 border-gray-300 mt-5' />
 
-                            <div className='flex flex-wrap px-6 md:px-10 lg:px-15 xl:px-20 gap-2 mt-5'>
+                            <div className='flex flex-wrap px-6 md:px-10 lg:px-15 xl:px-20 gap-2 mt-5 h-[80%] hover:overflow-y-scroll '>
                                 {
                                     searchedProducts.map((items) => (
                                         <figure key={items._id} className='border border-gray-300 mb-5 w-[125px] lg:w-[200px] xl:w-[250px] rounded-lg overflow-hidden relative'>
